@@ -1,6 +1,13 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Navbar from '../components/layout/Navbar'
+import Footer from '../components/layout/Footer'
+import SearchBar from '../components/SearchBar'
+import JobTypes from '../components/JobTypes'
+import Departments from '../components/Departments'
+import WorkSchedules from '../components/WorkSchedules'
+import Experiences from '../components/Experiences'
+import JobBoard from '../components/JobBoard'
 
 const Home: NextPage = () => {
   return (
@@ -11,11 +18,27 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <Navbar/>
-        <section className="p-4">
-          Hello, world!
-        </section>
+      <main >
+        <Navbar />
+        <div className="container mx-auto">
+          <div className="w-full pt-28">
+            <section className="flex item-center mt-2 mb-2 mx-2 bg-white">
+              <SearchBar/>
+            </section>
+            <section className="mt-4 mx-2 flex">
+              <div className="w-64 hidden lg:block">
+                <div className="w-full h-full">
+                  <JobTypes/>
+                  <Departments/>
+                  <WorkSchedules/>
+                  <Experiences/>
+                </div>
+              </div>
+              <JobBoard/>
+            </section>
+          </div>
+        </div>
+        <Footer/>
       </main>
     </div>
   )

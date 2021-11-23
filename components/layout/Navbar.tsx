@@ -9,7 +9,7 @@ const menus = [
 ]
 
 function Navbar() {
-  return <nav className="w-full flex justify-between items-center py-4 px-2 bg-white">
+  return <nav className="fixed w-full flex justify-between items-center py-4 px-2 bg-white">
     <div className="text-lg font-bold text-blue-500">HEALTH EXPLORER</div>
     <div className="hidden md:flex justify-between items-center">
       {menus.map((menu, index) => (<Link href={menu.link}>
