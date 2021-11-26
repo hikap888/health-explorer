@@ -15,6 +15,14 @@ function parseJobs(): Promise<any> {
   });
 }
 
+async function sleep(delay: number) {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve(null);
+    }, delay);
+  })
+}
+
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<JobPostItem[]>
@@ -46,6 +54,9 @@ export default async function handler(
       }
     }
     );
+
+    await sleep(2000);
+
     res.status(200).json(result);
   } catch (e) {
     console.log('file read error = ', e);
