@@ -1,6 +1,6 @@
 export default function Footer() {
   return <footer className="bg-white">
-    <div className="md:block container mx-auto md:flex w-full p-8 space-x-0 md:space-x-2">
+    <div className="md:block mx-auto md:flex w-full p-8 space-x-0 md:space-x-2">
       <div className="md:w-1/2">
         <h2 className="font-bold font-5xl mb-1">About Us</h2>
         <p className="mb-2"> We are a team of nurse, doctors, technologists and executives dedicated
